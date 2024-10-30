@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -18,6 +20,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
@@ -116,11 +119,15 @@ fun latihanInput(modifier: Modifier = Modifier){
         }) {
             Text(text = "Submit")
         }
+        ElevatedCard (
+            modifier = Modifier.fillMaxWidth(),
+            colors = CardDefaults.cardColors(containerColor = Color.LightGray)
+        ){
         DetailMessagge(param = "nama",  argum = Namakaiden)
         DetailMessagge(param = "email",  argum = Emailkaiden)
         DetailMessagge(param = "alamat",  argum = Alamatkaiden)
         DetailMessagge(param = "no telepon",  argum = Noteleponkaiden)
-        DetailMessagge(param = "memilihJK",  argum = memilihJKme)
+        DetailMessagge(param = "memilihJK",  argum = memilihJKme)}
     }
 }
 
