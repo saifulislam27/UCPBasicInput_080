@@ -83,18 +83,6 @@ fun latihanInput(modifier: Modifier = Modifier){
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email)
         )
         TextField(
-            value = alamat,
-            onValueChange = {alamat = it},
-            label = {
-                Text(text = "Alamat")
-            },
-            placeholder = {
-                Text(text = "isi alamat anda") //Hint text
-            },
-            modifier = Modifier.fillMaxWidth().padding(5.dp)
-        )
-
-        TextField(
             value = notelepon,
             onValueChange = {notelepon = it},
             label = {
@@ -106,6 +94,19 @@ fun latihanInput(modifier: Modifier = Modifier){
             modifier = Modifier.fillMaxWidth().padding(5.dp),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
         )
+        TextField(
+            value = alamat,
+            onValueChange = {alamat = it},
+            label = {
+                Text(text = "Alamat")
+            },
+            placeholder = {
+                Text(text = "isi alamat anda") //Hint text
+            },
+            modifier = Modifier.fillMaxWidth().padding(5.dp)
+        )
+
+
         Button(onClick = {
             Namakaiden = nama
             Emailkaiden = email
