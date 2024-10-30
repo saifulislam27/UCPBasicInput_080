@@ -3,6 +3,7 @@ package com.example.project4
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -25,6 +26,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Preview(showBackground = true)
 @Composable
@@ -48,6 +50,9 @@ fun latihanInput(modifier: Modifier = Modifier){
     Column(modifier = modifier.fillMaxSize().padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally)
     {
+        Text(text = "Biodata", fontSize = 16.sp, fontWeight = FontWeight.Bold,)
+        Spacer(Modifier.padding(10.dp))
+
         TextField(
             value = nama,
             onValueChange = {nama = it},
